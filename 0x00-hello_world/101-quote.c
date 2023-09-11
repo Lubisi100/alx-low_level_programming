@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <unistd.h>
 /**
  * main - this prints a string in a different way
  *
@@ -6,7 +7,6 @@
  */
 int main(void)
 {
-	fputs("and that piece of art is useful", stdout);
-	fputs("\" - Dora Korpar, 2015-10-19 ", stdout);
+	write(2, "and that piece of art is useful - Dora Korpar, 2015-10-19\n", 58);
 	return (1);
 }
